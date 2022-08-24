@@ -54,3 +54,10 @@ module.exports = {
 ## 问题汇总
 
 * `puppeteer` 下载失败问题，参考 [stackoverflow](https://stackoverflow.com/questions/53997175/puppeteer-error-chromium-revision-is-not-downloaded)
+执行 node node_modules/puppeteer/install.js
+
+代理问题，用
+```js
+const superagent =require('superagent');
+require('superagent-proxy')(superagent);
+let res = await superagent.post(config.url).proxy(proxy).disableTLSCerts()...
