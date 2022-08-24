@@ -61,3 +61,5 @@ module.exports = {
 const superagent =require('superagent');
 require('superagent-proxy')(superagent);
 let res = await superagent.post(config.url).proxy(proxy).disableTLSCerts()...
+```
+本地代理问题，在环境变量中添加http_proxy 和 https_proxy，命令行中设置只是会话
